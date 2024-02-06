@@ -1,0 +1,58 @@
+ /* .background-clip{
+  
+ object-fit: cover;
+  position: absolute;
+  background-size: 50%;
+  z-index: -1;
+ display: none;
+  filter: blur(225px);
+}  */
+
+
+.container{
+  max-width: 1300px !important;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media(max-width:1300px){
+  .container{
+    padding: 0 1.5rem;
+  }
+}
+
+.preloader {
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  background-size: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: 100;
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+/* Adding pseudo-element to apply transition */
+.preloader {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.preloader video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Hide the preloader when opacity is 0 */
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+
